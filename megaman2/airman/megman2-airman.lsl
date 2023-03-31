@@ -2,9 +2,9 @@
 <Layout version="1.6.1">
   <Mode>Vertical</Mode>
   <X>1243</X>
-  <Y>392</Y>
+  <Y>391</Y>
   <VerticalWidth>725</VerticalWidth>
-  <VerticalHeight>585</VerticalHeight>
+  <VerticalHeight>455</VerticalHeight>
   <HorizontalWidth>-1</HorizontalWidth>
   <HorizontalHeight>-1</HorizontalHeight>
   <Settings>
@@ -68,7 +68,7 @@
         <Version>1.6</Version>
         <CurrentSplitTopColor>FF3373F4</CurrentSplitTopColor>
         <CurrentSplitBottomColor>FF153574</CurrentSplitBottomColor>
-        <VisualSplitCount>16</VisualSplitCount>
+        <VisualSplitCount>4</VisualSplitCount>
         <SplitPreviewCount>1</SplitPreviewCount>
         <DisplayIcons>True</DisplayIcons>
         <ShowThinSeparators>True</ShowThinSeparators>
@@ -107,11 +107,11 @@
             <Name>+/-</Name>
             <Type>Delta</Type>
             <Comparison>Current Comparison</Comparison>
-            <TimingMethod>Current Timing Method</TimingMethod>
+            <TimingMethod>Game Time</TimingMethod>
           </Settings>
           <Settings>
             <Version>1.5</Version>
-            <Name>Time</Name>
+            <Name>Total </Name>
             <Type>SplitTime</Type>
             <Comparison>Current Comparison</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
@@ -127,13 +127,6 @@
             <Version>1.5</Version>
             <Name>Seg</Name>
             <Type>SegmentTime</Type>
-            <Comparison>Personal Best</Comparison>
-            <TimingMethod>Current Timing Method</TimingMethod>
-          </Settings>
-          <Settings>
-            <Version>1.5</Version>
-            <Name>PB</Name>
-            <Type>SplitTime</Type>
             <Comparison>Personal Best</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
           </Settings>
@@ -215,6 +208,82 @@
         <Reset>True</Reset>
         <Split>True</Split>
         <CustomSettings />
+      </Settings>
+    </Component>
+    <Component>
+      <Path>LiveSplit.AutoSplittingRuntime.dll</Path>
+      <Settings>
+        <Version>1.0</Version>
+        <ScriptPath>
+        </ScriptPath>
+      </Settings>
+    </Component>
+    <Component>
+      <Path>LiveSplit.Graph.dll</Path>
+      <Settings>
+        <Version>1.5</Version>
+        <Height>120</Height>
+        <Width>180</Width>
+        <BehindGraphColor>FF732828</BehindGraphColor>
+        <AheadGraphColor>FF287334</AheadGraphColor>
+        <GridlinesColor>50000000</GridlinesColor>
+        <PartialFillColorBehind>19FFFFFF</PartialFillColorBehind>
+        <CompleteFillColorBehind>32FFFFFF</CompleteFillColorBehind>
+        <PartialFillColorAhead>19FFFFFF</PartialFillColorAhead>
+        <CompleteFillColorAhead>32FFFFFF</CompleteFillColorAhead>
+        <GraphColor>FFFFFFFF</GraphColor>
+        <ShadowsColor>38000000</ShadowsColor>
+        <GraphLinesColor>FFFFFFFF</GraphLinesColor>
+        <LiveGraph>True</LiveGraph>
+        <FlipGraph>False</FlipGraph>
+        <Comparison>Best Segments</Comparison>
+        <ShowBestSegments>False</ShowBestSegments>
+        <GraphGoldColor>FFD8AF1F</GraphGoldColor>
+      </Settings>
+    </Component>
+    <Component>
+      <Path>LiveSplit.SumOfBest.dll</Path>
+      <Settings>
+        <Version>1.4</Version>
+        <TextColor>FFFFFFFF</TextColor>
+        <OverrideTextColor>False</OverrideTextColor>
+        <TimeColor>FFFFFFFF</TimeColor>
+        <OverrideTimeColor>False</OverrideTimeColor>
+        <Accuracy>Seconds</Accuracy>
+        <BackgroundColor>00FFFFFF</BackgroundColor>
+        <BackgroundColor2>00FFFFFF</BackgroundColor2>
+        <BackgroundGradient>Plain</BackgroundGradient>
+        <Display2Rows>False</Display2Rows>
+      </Settings>
+    </Component>
+    <Component>
+      <Path>LiveSplit.RunPrediction.dll</Path>
+      <Settings>
+        <Version>1.4</Version>
+        <TextColor>FFFFFFFF</TextColor>
+        <OverrideTextColor>False</OverrideTextColor>
+        <TimeColor>FFFFFFFF</TimeColor>
+        <OverrideTimeColor>False</OverrideTimeColor>
+        <Accuracy>Seconds</Accuracy>
+        <BackgroundColor>00FFFFFF</BackgroundColor>
+        <BackgroundColor2>00FFFFFF</BackgroundColor2>
+        <BackgroundGradient>Plain</BackgroundGradient>
+        <Comparison>Current Comparison</Comparison>
+        <Display2Rows>False</Display2Rows>
+      </Settings>
+    </Component>
+    <Component>
+      <Path>LiveSplit.CurrentComparison.dll</Path>
+      <Settings>
+        <Version>1.4</Version>
+        <TextColor>FFFFFFFF</TextColor>
+        <OverrideTextColor>False</OverrideTextColor>
+        <TimeColor>FFFFFFFF</TimeColor>
+        <OverrideTimeColor>False</OverrideTimeColor>
+        <BackgroundColor>00FFFFFF</BackgroundColor>
+        <BackgroundColor2>00FFFFFF</BackgroundColor2>
+        <BackgroundGradient>Plain</BackgroundGradient>
+        <Display2Rows>False</Display2Rows>
       </Settings>
     </Component>
   </Components>
