@@ -17,67 +17,53 @@ reset {
     if(vars.state_machine == 0) {
         return;
     } 
-    
-    
+        
     // Start of Air Man level "Ready" blinking
     if((current._stage == 1) && 
-       (current._mmxpos == 61440) && (current._mmypos == 120)) {
+       (current._mmxpos == 61440) && (current._mmypos == 10360)) {
         print("Reset Air Man");
         vars.state_machine = 0;
         return true;
     }
-    
 }
 
-split {
-    bool AtAirManLevel1() {
-        return (current._stage == 1) && (current._mmxpos == 61568) && (current._mmypos == 116); 
-    }
-
-    bool AtAirManLevel2() {
-        return (current._stage == 1) && (current._mmxpos == 61568) && (current._mmypos == 116);     
-    }
-    
-    bool AtAirManLevel3() {
-        return (current._stage == 1) && (current._mmxpos == 61568) && (current._mmypos == 116);         
-    }
-    
-    bool AtAirManLevelBoss() {
-        return (current._stage == 1) && (current._mmxpos == 61568) && (current._mmypos == 116);         
-    }
-    
-    bool IsAirManDead() {
-        return (current._stage == 1) && (current._mmxpos == 61568) && (current._mmypos == 116); 
-        return current._bosshp == 0;
-    }
-    
-    
+start {
     if(vars.state_machine == 0) {
-        if(AtAirManLevel1()) {
+        //if(AtAirManLevel1()) {
+        if((current._stage == 1) && (current._mmxpos == 61568) && (current._mmypos == 10356)) {
             vars.state_machine++;
             print("Starting Air Man Level 1");
             return true;
         }
-    } else if(vars.state_machine == 1) {
-        if(AtAirManLevel2()) {
+    }
+//    return false;
+}
+}
+split {
+    if(vars.state_machine == 1) {
+        //if(AtAirManLevel2()) {
+        if((current._stage == 1) && (current._mmxpos == 61575) && (current._mmypos == 10356)) {
             vars.state_machine++;
             print("Starting Air Man Level 2");
             return true;
         }
     } else if(vars.state_machine == 2) {
-        if(AtAirManLevel3()) {
+        //if(AtAirManLevel3()) {
+        if((current._stage == 1) && (current._mmxpos == 61600) && (current._mmypos == 10356)) {
             vars.state_machine++;
             print("Starting Air Man Level 3");
             return true;
         }
     } else if(vars.state_machine == 3) {
-        if(AtAirManBoss()) {
+        //if(AtAirManBoss()) {
+        if((current._stage == 1) && (current._mmxpos == 61668) && (current._mmypos == 10356)) {
             vars.state_machine++;
             print("Starting Air Man Boss");
             return true;
         }
     } else if(vars.state_machine == 4) {
-        if(IsAirManDead()) {
+        //if(IsAirManDead()) {
+        if(current._bosshp == 0) {
             vars.state_machine++;
             print("Air Man defeated");
             return true;
@@ -86,6 +72,8 @@ split {
     else {
         // No-op
     }
+
+//    bool foo() { return; }
 
 }
 
