@@ -24,7 +24,21 @@ init {
     vars.thisscreen = 500;
     vars.lastscreen = 500;
     
-    vars.IsVerticalTransition = () => (vars.lastscreen == 2) && (current._screen == 128);
+    vars.isVerticalTransition = false;
+}
+
+
+update {
+    vars.lastx = vars.thisx;
+    vars.thisx = current._mmxpos;
+
+    vars.lastscreen = vars.thisscreen;
+    vars.thisscreen = current._screen;
+
+    vars.mmAppeared = (vars.lastx == 0) && (current._mmxpos == 128);
+    vars.isVerticalTransition = (vars.lastscreen == 2) && (current._screen == 128);
+    
+    return true;
 }
 
 reset {
@@ -34,26 +48,16 @@ reset {
     } 
         
     // Start of Air Man level "Ready" blinking
-    if((current._mmxpos == 128) && (vars.lastx == 0)) {
+    if(vars.mmAppeared) {
         print("Reset");
         vars.state_machine = 0;
         return true;
     }
 }
 
-update {
-    vars.lastx = vars.thisx;
-    vars.thisx = current._mmxpos;
-
-    vars.lastscreen = vars.thisscreen;
-    vars.thisscreen = current._screen;
-    
-    return true;
-}
-
 start {
     if(vars.state_machine == 0) {
-        if((vars.lastx == 0) && (current._mmxpos == 128)) {
+        if(vars.mmAppeared) {
             vars.state_machine++;
             print("Starting Level");
             return true;
@@ -62,9 +66,9 @@ start {
 }
 
 split {
-    if(vars.IsVerticalTransition()) {
+    if(vars.isVerticalTransition) {
+        print("Vertical transition count: " + vars.state_machine.ToString());
         vars.state_machine++;
-        print("Vertical transition count: " + vars.state_machines.ToString());
     }
 }
 
