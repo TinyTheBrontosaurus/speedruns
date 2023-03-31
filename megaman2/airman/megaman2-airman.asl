@@ -39,12 +39,16 @@ update {
     vars.lastscreen = vars.thisscreen;
     vars.thisscreen = current._screen;
     
+    if( vars.lastscreen != vars.thisscreen) {
+      print("screen: " + vars.lastscreen.ToString() + " " + vars.thisscreen.ToString());
+    }
+    
     return true;
 }
 
 start {
     if(vars.state_machine == 0) {
-        if((current._mmxpos == 128) && (vars.lastx == 0)) {
+        if((vars.lastx == 0) && (current._mmxpos == 128)) {
             vars.state_machine++;
             print("Starting Air Man Level 1");
             return true;
@@ -54,35 +58,35 @@ start {
 
 split {
     if(vars.state_machine == 1) {
-        if((current._screen == 128) && (vars.lastscreen == 2)) {
+        if((vars.lastscreen == 2) && (current._screen == 0)) {
             vars.state_machine++;
             print("Starting Air Man Level 2");
             return true;
         }
     } else if(vars.state_machine == 2) {
-        if((current._screen == 128) && (vars.lastscreen == 2)) {
+        if((vars.lastscreen == 2) && (current._screen == 0)) {
             vars.state_machine++;
             print("Starting Air Man Level 3");
             return true;
         }
     } else if(vars.state_machine == 3) {
-        if((current._screen == 2) && (vars.lastscreen == 0)) {
+        if((vars.lastscreen == 0) && (current._screen == 2)) {
             vars.state_machine++;
             print("Starting Air Man Gate 1 open");
         }
     } else if(vars.state_machine == 4) {
-        if((current._screen == 2) && (vars.lastscreen == 0)) {
+        if((vars.lastscreen == 0) && (current._screen == 2)) {
             vars.state_machine++;
             print("Starting Air Man Gate 1 close");
         }
     } else if(vars.state_machine == 5) {
-        if((current._screen == 2) && (vars.lastscreen == 0)) {
+        if((vars.lastscreen == 0) && (current._screen == 2)) {
             vars.state_machine++;
             print("Starting Air Man Boss open");
             return true;
         }
     } else if(vars.state_machine == 6) {
-        if((current._screen == 2) && (vars.lastscreen == 0)) {
+        if((vars.lastscreen == 0) && (current._screen == 2)) {
             vars.state_machine++;
             print("Starting Air Man Boss");
         }
