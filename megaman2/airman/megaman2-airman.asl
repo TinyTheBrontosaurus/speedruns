@@ -39,9 +39,9 @@ update {
     vars.lastscreen = vars.thisscreen;
     vars.thisscreen = current._screen;
     
-    if( vars.lastscreen != vars.thisscreen) {
+/*    if( vars.lastscreen != vars.thisscreen) {
       print("screen: " + vars.lastscreen.ToString() + " " + vars.thisscreen.ToString());
-    }
+    }*/
     
     return true;
 }
@@ -70,32 +70,11 @@ split {
             return true;
         }
     } else if(vars.state_machine == 3) {
-        if((vars.lastscreen == 0) && (current._screen == 2)) {
-            vars.state_machine++;
-            print("Starting Air Man Gate 1 open");
-        }
-    } else if(vars.state_machine == 4) {
-        if((vars.lastscreen == 0) && (current._screen == 2)) {
-            vars.state_machine++;
-            print("Starting Air Man Gate 1 close");
-        }
-    } else if(vars.state_machine == 5) {
-        if((vars.lastscreen == 0) && (current._screen == 2)) {
-            vars.state_machine++;
-            print("Starting Air Man Boss open");
-            return true;
-        }
-    } else if(vars.state_machine == 6) {
-        if((vars.lastscreen == 0) && (current._screen == 2)) {
-            vars.state_machine++;
-            print("Starting Air Man Boss");
-        }
-    } else if(vars.state_machine == 7) {
         if(current._bosshp > 0) {
             vars.state_machine++;
             print("Air Man energizing");
         }
-    } else if(vars.state_machine == 8) {
+    } else if(vars.state_machine == 4) {
         if(current._bosshp == 0) {
             vars.state_machine++;
             print("Air Man defeated");
