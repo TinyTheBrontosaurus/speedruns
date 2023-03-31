@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>air man</GameName>
+  <CategoryName>
+  </CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>6</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="1" started="03/31/2023 02:30:10" isStartedSynced="True" ended="03/31/2023 02:32:11" isEndedSynced="True">
+      <RealTime>00:02:01.1872008</RealTime>
+    </Attempt>
+    <Attempt id="2" started="03/31/2023 02:33:18" isStartedSynced="True" ended="03/31/2023 02:33:22" isEndedSynced="True" />
+    <Attempt id="3" started="03/31/2023 02:33:22" isStartedSynced="True" ended="03/31/2023 02:35:19" isEndedSynced="True">
+      <RealTime>00:01:57.2101566</RealTime>
+    </Attempt>
+    <Attempt id="4" started="03/31/2023 02:35:39" isStartedSynced="True" ended="03/31/2023 02:35:43" isEndedSynced="True" />
+    <Attempt id="5" started="03/31/2023 02:35:43" isStartedSynced="True" ended="03/31/2023 02:35:49" isEndedSynced="True" />
+    <Attempt id="6" started="03/31/2023 02:35:49" isStartedSynced="True" ended="03/31/2023 02:37:45" isEndedSynced="True">
+      <RealTime>00:01:56.6204265</RealTime>
+    </Attempt>
+  </AttemptHistory>
+  <Segments>
+    <Segment>
+      <Name>Level 1</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:58.5370476</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:57.7615661</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:58.0377392</RealTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:57.7615661</RealTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:58.5370476</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Level 2</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:03.4945988</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:04.9093020</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:04.9093020</RealTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:05.1513745</RealTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:04.9575512</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Level 3</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:47.7116811</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:44.2170823</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:47.1933653</RealTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:44.9749651</RealTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:44.2170823</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Fight</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:56.6204265</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:08.9087454</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:11.0467943</RealTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:09.3222509</RealTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:08.9087454</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>

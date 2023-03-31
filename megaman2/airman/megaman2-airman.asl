@@ -1,4 +1,16 @@
-state("fceux64")
+/**
+ *  Auto splitter that runs against the Air Man level. It has the following splits:
+ *    - Resets on X going from 0->128 in consecutive frames (MM appearing)
+ *    - Top level (Triggers from screen shift down)
+ *    - Mid level (Triggers from screen shift down)
+ *    - Bottom level (Triggers at air man HP energizing)
+ *    - Air man fight (Triggers at air man HP at 0)
+ *
+ */
+
+
+
+state("fceux64", "2.3.5")
 {
     byte _bosshp : 0x4D5150, 0x6C1;
     byte _mmhp : 0x4D5150, 0x6C0;
@@ -38,10 +50,6 @@ update {
 
     vars.lastscreen = vars.thisscreen;
     vars.thisscreen = current._screen;
-    /*
-    if( vars.lastscreen != vars.thisscreen) {
-      print("screen: " + vars.lastscreen.ToString() + " " + vars.thisscreen.ToString());
-    }*/
     
     return true;
 }
