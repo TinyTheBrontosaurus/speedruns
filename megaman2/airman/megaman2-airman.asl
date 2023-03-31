@@ -38,8 +38,8 @@ update {
 
     vars.lastscreen = vars.thisscreen;
     vars.thisscreen = current._screen;
-    
-/*    if( vars.lastscreen != vars.thisscreen) {
+    /*
+    if( vars.lastscreen != vars.thisscreen) {
       print("screen: " + vars.lastscreen.ToString() + " " + vars.thisscreen.ToString());
     }*/
     
@@ -58,13 +58,13 @@ start {
 
 split {
     if(vars.state_machine == 1) {
-        if((vars.lastscreen == 2) && (current._screen == 0)) {
+        if((vars.lastscreen == 2) && (current._screen == 128)) {
             vars.state_machine++;
             print("Starting Air Man Level 2");
             return true;
         }
     } else if(vars.state_machine == 2) {
-        if((vars.lastscreen == 2) && (current._screen == 0)) {
+        if((vars.lastscreen == 2) && (current._screen == 128)) {
             vars.state_machine++;
             print("Starting Air Man Level 3");
             return true;
@@ -73,6 +73,7 @@ split {
         if(current._bosshp > 0) {
             vars.state_machine++;
             print("Air Man energizing");
+            return true;
         }
     } else if(vars.state_machine == 4) {
         if(current._bosshp == 0) {
