@@ -72,7 +72,10 @@ split {
             vars.state_machine++;
             return true;
         }
-    } else if(vars.state_machine == 14) {
+    }
+    
+    // <= to deal with missed vertical transitions
+    if(vars.state_machine <= 14) {
         if(current._bosshp > 0) {
             vars.state_machine++;
             print("Crash Man energizing");
