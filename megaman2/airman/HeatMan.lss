@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>HeatMan</GameName>
+  <CategoryName>
+  </CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>14</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="1" started="04/01/2023 13:52:17" isStartedSynced="True" ended="04/01/2023 13:52:18" isEndedSynced="True" />
+    <Attempt id="2" started="04/01/2023 13:52:18" isStartedSynced="True" ended="04/01/2023 13:53:28" isEndedSynced="True" />
+    <Attempt id="3" started="04/01/2023 13:53:28" isStartedSynced="True" ended="04/01/2023 13:55:10" isEndedSynced="True" />
+    <Attempt id="4" started="04/01/2023 13:55:10" isStartedSynced="True" ended="04/01/2023 13:57:14" isEndedSynced="True" />
+    <Attempt id="5" started="04/01/2023 13:57:14" isStartedSynced="True" ended="04/01/2023 14:00:04" isEndedSynced="True">
+      <RealTime>00:02:50.1596220</RealTime>
+    </Attempt>
+    <Attempt id="6" started="04/01/2023 16:46:53" isStartedSynced="True" ended="04/01/2023 16:46:56" isEndedSynced="True" />
+    <Attempt id="7" started="04/01/2023 16:46:56" isStartedSynced="True" ended="04/01/2023 16:47:15" isEndedSynced="True" />
+    <Attempt id="8" started="04/01/2023 16:47:15" isStartedSynced="True" ended="04/01/2023 16:47:20" isEndedSynced="True" />
+    <Attempt id="9" started="04/01/2023 16:47:20" isStartedSynced="True" ended="04/01/2023 16:48:13" isEndedSynced="True" />
+    <Attempt id="10" started="04/01/2023 16:48:13" isStartedSynced="True" ended="04/01/2023 16:48:35" isEndedSynced="True" />
+    <Attempt id="11" started="04/01/2023 16:48:35" isStartedSynced="True" ended="04/01/2023 16:49:01" isEndedSynced="True" />
+    <Attempt id="12" started="04/01/2023 16:49:01" isStartedSynced="True" ended="04/01/2023 16:49:28" isEndedSynced="True" />
+    <Attempt id="13" started="04/01/2023 16:49:28" isStartedSynced="True" ended="04/01/2023 16:50:19" isEndedSynced="True" />
+    <Attempt id="14" started="04/01/2023 16:50:19" isStartedSynced="True" ended="04/01/2023 16:51:59" isEndedSynced="True">
+      <RealTime>00:01:40.0979668</RealTime>
+    </Attempt>
+  </AttemptHistory>
+  <Segments>
+    <Segment>
+      <Name>Level 1</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:31.6264604</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:29.7515580</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:00:30.4192010</RealTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:31.1368870</RealTime>
+        </Time>
+        <Time id="4">
+          <RealTime>00:00:30.0922070</RealTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:29.7515580</RealTime>
+        </Time>
+        <Time id="9">
+          <RealTime>00:00:32.8085051</RealTime>
+        </Time>
+        <Time id="13">
+          <RealTime>00:00:31.8795287</RealTime>
+        </Time>
+        <Time id="14">
+          <RealTime>00:00:31.6264604</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Level 2</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:37.4259680</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:05.7742391</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:00:08.9453330</RealTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:09.0119690</RealTime>
+        </Time>
+        <Time id="4">
+          <RealTime>00:00:10.4133950</RealTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:11.7185360</RealTime>
+        </Time>
+        <Time id="9">
+          <RealTime>00:00:05.7742391</RealTime>
+        </Time>
+        <Time id="13">
+          <RealTime>00:00:09.3174566</RealTime>
+        </Time>
+        <Time id="0">
+          <RealTime>00:00:11.7185370</RealTime>
+        </Time>
+        <Time id="14">
+          <RealTime>00:00:05.7995076</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Level 3</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:18.2163805</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:10.7745533</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:00:11.4517150</RealTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:01:32.6432790</RealTime>
+        </Time>
+        <Time id="9">
+          <RealTime>00:00:10.7745533</RealTime>
+        </Time>
+        <Time id="14">
+          <RealTime>00:00:40.7904125</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Level 4</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:26.7114010</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:02.4576630</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:00:02.4576630</RealTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:05.7498610</RealTime>
+        </Time>
+        <Time id="14">
+          <RealTime>00:00:08.4950205</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Level 5</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:40.0723104</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:13.3609094</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="5">
+          <RealTime>00:00:13.5027140</RealTime>
+        </Time>
+        <Time id="0">
+          <RealTime>00:00:13.5027150</RealTime>
+        </Time>
+        <Time id="14">
+          <RealTime>00:00:13.3609094</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Heat Man</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:40.0979668</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.0256564</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="5">
+          <RealTime>00:00:16.7936710</RealTime>
+        </Time>
+        <Time id="0">
+          <RealTime>00:00:16.7936720</RealTime>
+        </Time>
+        <Time id="14">
+          <RealTime>00:00:00.0256564</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>
