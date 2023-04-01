@@ -42,11 +42,6 @@ update {
 }
 
 reset {
-    // Don't reset if already reset
-    if(vars.state_machine == 0) {
-        return;
-    } 
-        
     // Start level "Ready" blinking
     if(vars.mmAppeared) {
         print("Reset");
