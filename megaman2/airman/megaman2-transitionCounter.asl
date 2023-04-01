@@ -41,13 +41,8 @@ update {
     return true;
 }
 
-reset {
-    // Don't reset if already reset
-    if(vars.state_machine == 0) {
-        return;
-    } 
-        
-    // Start of Air Man level "Ready" blinking
+reset {        
+    // End of "Ready" blinking
     if(vars.mmAppeared) {
         print("Reset");
         vars.state_machine = 0;
