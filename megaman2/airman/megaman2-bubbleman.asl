@@ -18,7 +18,7 @@ state("fceux64", "2.3.5")
 
 startup {
     vars.boss = "Bubble Man";
-    vars.levels = 9;
+    vars.levels = 5;
 }
 
 init {
