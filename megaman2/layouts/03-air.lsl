@@ -4,7 +4,7 @@
   <X>1243</X>
   <Y>391</Y>
   <VerticalWidth>725</VerticalWidth>
-  <VerticalHeight>705</VerticalHeight>
+  <VerticalHeight>455</VerticalHeight>
   <HorizontalWidth>-1</HorizontalWidth>
   <HorizontalHeight>-1</HorizontalHeight>
   <Settings>
@@ -68,7 +68,7 @@
         <Version>1.6</Version>
         <CurrentSplitTopColor>FF3373F4</CurrentSplitTopColor>
         <CurrentSplitBottomColor>FF153574</CurrentSplitBottomColor>
-        <VisualSplitCount>14</VisualSplitCount>
+        <VisualSplitCount>4</VisualSplitCount>
         <SplitPreviewCount>1</SplitPreviewCount>
         <DisplayIcons>True</DisplayIcons>
         <ShowThinSeparators>True</ShowThinSeparators>
@@ -203,11 +203,19 @@
       <Path>LiveSplit.ScriptableAutoSplit.dll</Path>
       <Settings>
         <Version>1.5</Version>
-        <ScriptPath>C:\Users\big89\Documents\Work\23-speedrunning\autosplits\megaman2\airman\megaman2-heatman.asl</ScriptPath>
+        <ScriptPath>C:\Users\big89\Documents\Work\23-speedrunning\autosplits\megaman2\split\03-air.asl</ScriptPath>
         <Start>True</Start>
         <Reset>True</Reset>
         <Split>True</Split>
         <CustomSettings />
+      </Settings>
+    </Component>
+    <Component>
+      <Path>LiveSplit.AutoSplittingRuntime.dll</Path>
+      <Settings>
+        <Version>1.0</Version>
+        <ScriptPath>
+        </ScriptPath>
       </Settings>
     </Component>
     <Component>
