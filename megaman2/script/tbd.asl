@@ -15,6 +15,12 @@ state("fceux64", "2.3.5")
     byte _screen : 0x4D5150, 0x1B;
 }
 
+
+startup {
+    vars.boss = "TBD Man";
+    vars.levels = 15;
+}
+
 init {
     print("Init");
     vars.state_machine = 0;
@@ -41,8 +47,8 @@ update {
     return true;
 }
 
-reset {        
-    // End of "Ready" blinking
+reset {
+    // Start level "Ready" blinking
     if(vars.mmAppeared) {
         print("Reset");
         vars.state_machine = 0;
@@ -61,9 +67,28 @@ start {
 }
 
 split {
-    if(vars.isVerticalTransition) {
-        print("Vertical transition count: " + vars.state_machine.ToString());
-        vars.state_machine++;
+    
+    if(vars.state_machine <= (vars.levels - 1)) {
+        if(vars.isVerticalTransition) {
+            print("Vertical transition count: " + vars.state_machine.ToString());
+            vars.state_machine++;
+            return true;
+        }
+    }
+    
+    // <= to deal with missed vertical transitions
+    if(vars.state_machine <= vars.levels) {
+        if(current._bosshp > 0) {
+            vars.state_machine++;
+            print(vars.boss + " energizing");
+            return true;
+        }
+    } else if(vars.state_machine == (vars.levels + 1)) {  
+        if(current._bosshp == 0) {
+            vars.state_machine++;
+            print(vars.boss + " defeated");
+            return true;
+        }   
     }
 }
 
