@@ -71,6 +71,8 @@ init
     vars.iknowimdead = 0;
     vars.framecounter = 0;
     vars.bossrushdone = 0;
+    vars.last_split_reset = 300;
+    vars.last_split = 0;
     
     if (modules.First().ModuleMemorySize == 0x487000)
         version = "v2.2.3";
@@ -87,6 +89,7 @@ start {
         vars.iknowimdead = 0;
         vars.framecounter = 0;
         vars.bossrushdone = 0;
+        vars.last_split = 0;
         print("--Here we go!");
         return true;
     }
@@ -172,12 +175,20 @@ split
             }
         }
     } else { //new logic
+    
+        if(last_split != 0) {
+            vars.last_split -= 1;
+            return false;
+        }
+        
         if (old.soundfx == 0xF1 && current.soundfx == 0x35) {
             print("--Boss killed and teleported out!--");
+            vars.last_split = vars.last_split_reset;
             return true;
         }
         if (old.stage == 12 && current.stage == 13) {
             print("--Beat Wily Machine, moving to last stage!--");
+            vars.last_split = vars.last_split_reset;
             return true;
         }
         if (current.stage == 13) {

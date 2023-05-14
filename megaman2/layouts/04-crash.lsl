@@ -203,7 +203,7 @@
       <Path>LiveSplit.ScriptableAutoSplit.dll</Path>
       <Settings>
         <Version>1.5</Version>
-        <ScriptPath>C:\Users\big89\Documents\Work\23-speedrunning\autosplits\megaman2\split\04-crash.asl</ScriptPath>
+        <ScriptPath>C:\Users\big89\Documents\Work\23-speedrunning\autosplits\megaman2\script\04-crash.asl</ScriptPath>
         <Start>True</Start>
         <Reset>True</Reset>
         <Split>True</Split>

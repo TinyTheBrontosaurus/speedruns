@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Layout version="1.6.1">
   <Mode>Vertical</Mode>
-  <X>1507</X>
-  <Y>391</Y>
+  <X>1082</X>
+  <Y>153</Y>
   <VerticalWidth>461</VerticalWidth>
-  <VerticalHeight>731</VerticalHeight>
-  <HorizontalWidth>2020</HorizontalWidth>
-  <HorizontalHeight>45</HorizontalHeight>
+  <VerticalHeight>603</VerticalHeight>
+  <HorizontalWidth>-1</HorizontalWidth>
+  <HorizontalHeight>-1</HorizontalHeight>
   <Settings>
     <TextColor>FFFFFFFF</TextColor>
     <BackgroundColor>FF0F0F0F</BackgroundColor>
@@ -132,16 +132,23 @@
           </Settings>
           <Settings>
             <Version>1.5</Version>
-            <Name>Delta</Name>
+            <Name>PB-Delta</Name>
             <Type>Delta</Type>
             <Comparison>Current Comparison</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
           </Settings>
           <Settings>
             <Version>1.5</Version>
-            <Name>Seg</Name>
+            <Name>PB-Run</Name>
             <Type>SegmentTime</Type>
             <Comparison>Personal Best</Comparison>
+            <TimingMethod>Current Timing Method</TimingMethod>
+          </Settings>
+          <Settings>
+            <Version>1.5</Version>
+            <Name>Best</Name>
+            <Type>SegmentTime</Type>
+            <Comparison>Best Segments</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
           </Settings>
         </Columns>
@@ -178,7 +185,7 @@
         <DropDecimals>True</DropDecimals>
         <Comparison>Current Comparison</Comparison>
         <Display2Rows>False</Display2Rows>
-        <ShowPossibleTimeSave>False</ShowPossibleTimeSave>
+        <ShowPossibleTimeSave>True</ShowPossibleTimeSave>
         <TimeSaveAccuracy>Tenths</TimeSaveAccuracy>
       </Settings>
     </Component>
@@ -230,29 +237,6 @@
       </Settings>
     </Component>
     <Component>
-      <Path>LiveSplit.Graph.dll</Path>
-      <Settings>
-        <Version>1.5</Version>
-        <Height>120</Height>
-        <Width>180</Width>
-        <BehindGraphColor>FF732828</BehindGraphColor>
-        <AheadGraphColor>FF287334</AheadGraphColor>
-        <GridlinesColor>50000000</GridlinesColor>
-        <PartialFillColorBehind>19FFFFFF</PartialFillColorBehind>
-        <CompleteFillColorBehind>32FFFFFF</CompleteFillColorBehind>
-        <PartialFillColorAhead>19FFFFFF</PartialFillColorAhead>
-        <CompleteFillColorAhead>32FFFFFF</CompleteFillColorAhead>
-        <GraphColor>FFFFFFFF</GraphColor>
-        <ShadowsColor>38000000</ShadowsColor>
-        <GraphLinesColor>FFFFFFFF</GraphLinesColor>
-        <LiveGraph>True</LiveGraph>
-        <FlipGraph>False</FlipGraph>
-        <Comparison>Best Segments</Comparison>
-        <ShowBestSegments>False</ShowBestSegments>
-        <GraphGoldColor>FFD8AF1F</GraphGoldColor>
-      </Settings>
-    </Component>
-    <Component>
       <Path>LiveSplit.SumOfBest.dll</Path>
       <Settings>
         <Version>1.4</Version>
@@ -264,22 +248,6 @@
         <BackgroundColor>00FFFFFF</BackgroundColor>
         <BackgroundColor2>00FFFFFF</BackgroundColor2>
         <BackgroundGradient>Plain</BackgroundGradient>
-        <Display2Rows>False</Display2Rows>
-      </Settings>
-    </Component>
-    <Component>
-      <Path>LiveSplit.RunPrediction.dll</Path>
-      <Settings>
-        <Version>1.4</Version>
-        <TextColor>FFFFFFFF</TextColor>
-        <OverrideTextColor>False</OverrideTextColor>
-        <TimeColor>FFFFFFFF</TimeColor>
-        <OverrideTimeColor>False</OverrideTimeColor>
-        <Accuracy>Seconds</Accuracy>
-        <BackgroundColor>00FFFFFF</BackgroundColor>
-        <BackgroundColor2>00FFFFFF</BackgroundColor2>
-        <BackgroundGradient>Plain</BackgroundGradient>
-        <Comparison>Current Comparison</Comparison>
         <Display2Rows>False</Display2Rows>
       </Settings>
     </Component>
