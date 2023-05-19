@@ -127,7 +127,7 @@
             <Version>1.5</Version>
             <Name>Total </Name>
             <Type>SplitTime</Type>
-            <Comparison>Current Comparison</Comparison>
+            <Comparison>Average Segments</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
           </Settings>
           <Settings>
@@ -147,7 +147,7 @@
           <Settings>
             <Version>1.5</Version>
             <Name>Best</Name>
-            <Type>SegmentTime</Type>
+            <Type>SegmentDeltaorSegmentTime</Type>
             <Comparison>Best Segments</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
           </Settings>
