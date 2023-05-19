@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Layout version="1.6.1">
   <Mode>Vertical</Mode>
-  <X>1082</X>
-  <Y>153</Y>
+  <X>1424</X>
+  <Y>223</Y>
   <VerticalWidth>461</VerticalWidth>
   <VerticalHeight>603</VerticalHeight>
   <HorizontalWidth>-1</HorizontalWidth>
@@ -127,7 +127,7 @@
             <Version>1.5</Version>
             <Name>Total </Name>
             <Type>SplitTime</Type>
-            <Comparison>Average Segments</Comparison>
+            <Comparison>Personal Best</Comparison>
             <TimingMethod>Current Timing Method</TimingMethod>
           </Settings>
           <Settings>
