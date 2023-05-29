@@ -3,7 +3,7 @@
 DEST="../../../../fceux/fcs/Mega Man 2 (U).fc"
 
 CMD="cp"
-${CMD} 02b-heatman-level.fc0 "${DEST}1"
+${CMD}  02c-heatman-endL1.fc0 "${DEST}1"
 ${CMD} 03a-airman-clouds.fc0 "${DEST}2"
 ${CMD} 04a-crashman-level.fc0 "${DEST}3"
 ${CMD} 05-quickman.fc0 "${DEST}4"
