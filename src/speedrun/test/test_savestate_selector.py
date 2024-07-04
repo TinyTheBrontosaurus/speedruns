@@ -54,7 +54,7 @@ def valid_setup(tmpdir):
     return ValidSetup(src, dest, cfg)
 
 
-def test_valid(valid_setup):
+def test_valid(valid_setup, caplog):
     """Check that nominal execution throws no warnings"""
     # Arrange
 
@@ -62,8 +62,7 @@ def test_valid(valid_setup):
     object_under_test = savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
 
     # Assert
-    # Empty
-    pass
+    assert len(caplog.messages) == 0
 
 def test_missing_dest_1(valid_setup, caplog):
     """Check that warnings are printed when dest files are missing"""

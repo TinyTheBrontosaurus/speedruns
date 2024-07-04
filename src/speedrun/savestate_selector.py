@@ -85,3 +85,5 @@ def main(argv):
         config = yaml.safe_load(f)
 
     savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent, dest_root=definitions.FCEUX_DIR)
+
+    pass
