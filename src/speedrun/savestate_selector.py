@@ -37,7 +37,7 @@ class SaveStateSetConfig:
                               description=state_cfg["description"])
 
             if not state.file.is_file():
-                logger.error(f"Source save state does not exist {state.file} ({state.description})")
+                logger.error(f"Source save state does not exist: {state.file} ({state.description})")
                 success = False
 
             self._states.append(state)

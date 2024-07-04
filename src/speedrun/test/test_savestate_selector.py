@@ -59,10 +59,11 @@ def test_valid(valid_setup):
     # Arrange
 
     # Act
-    savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
+    object_under_test = savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
 
     # Assert
     # Empty
+    pass
 
 def test_missing_dest_1(valid_setup, caplog):
     """Check that warnings are printed when dest files are missing"""
@@ -70,7 +71,7 @@ def test_missing_dest_1(valid_setup, caplog):
     (valid_setup.dest / "Game Name.fc1").unlink()
 
     # Act
-    savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
+    object_under_test = savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
 
     # Assert
     assert len(caplog.messages) == 1
@@ -84,9 +85,39 @@ def test_missing_dest_2(valid_setup, caplog):
     (valid_setup.dest / "Game Name.fc9").unlink()
 
     # Act
-    savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
+    object_under_test = savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
 
     # Assert
     assert len(caplog.messages) == 2
     assert "Destination file does not exist:" in caplog.messages[0]
     assert "Destination file does not exist:" in caplog.messages[1]
+
+
+def test_missing_src_1(valid_setup, caplog):
+    """Check that exceptions are thrown when src files are missing"""
+    # Arrange
+    (valid_setup.src / "parent" / "child" / "file.fc0").unlink()
+
+    # Act / Assert
+    with pytest.raises(savestate_selector.SaveStateSetSelectorConfigException):
+        savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
+
+    # Assert
+    assert len(caplog.messages) == 1
+    assert "Source save state does not exist:" in caplog.messages[0]
+
+
+def test_missing_src_2(valid_setup, caplog):
+    """Check that exceptions are thrown when src files are missing"""
+    # Arrange
+    (valid_setup.src / "parent" / "child" / "file.fc0").unlink()
+    (valid_setup.src / "parent" / "child" / "file2.fc0").unlink()
+
+    # Act / Assert
+    with pytest.raises(savestate_selector.SaveStateSetSelectorConfigException):
+        savestate_selector.SaveStateSetSelectorConfig(valid_setup.cfg, valid_setup.src, valid_setup.dest)
+
+    # Assert
+    assert len(caplog.messages) == 2
+    assert "Source save state does not exist:" in caplog.messages[0]
+    assert "Source save state does not exist:" in caplog.messages[1]
