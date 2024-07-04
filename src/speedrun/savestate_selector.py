@@ -25,7 +25,7 @@ class SaveStateSetConfig:
         self._name = raw["name"]
         root_og = root
         if "root" in raw:
-            root = root_og / raw["root"]
+            root = root_og / str(raw["root"])
 
         if len(raw["states"]) > savestate_count:
             raise SaveStateSetSelectorConfigException(f"Too many states in {self._name}")
@@ -43,23 +43,22 @@ class SaveStateSetConfig:
             self._states.append(state)
 
         if not success:
-            raise SaveStateSetSelectorConfigException(
+            raise SaveStateSetSelectorConfigException("Source files missing. See log.")
 
 
 class SaveStateSetSelectorConfig:
-    def __init__(self, raw):
-        self._root = Path(raw["root"])
+    def __init__(self, raw, src_root, dest_root):
+        self._root = src_root / raw["root"]
         if not self._root.is_dir():
             raise SaveStateSetSelectorConfigException(
                 f"Root directory does not exist: {self._root}")
 
         self._dest_prefix = str(raw["destination-prefix"])
-        dest_prefix_abs = definitions.FCEUX_DIR / self._dest_prefix
 
         # Check to be sure each save state exists. Only warn if it does not exist since
         # it may indicate a typo in the config.
         for savestatei in range(savestate_count):
-            dest = dest_prefix_abs + str(savestatei)
+            dest = dest_root / (self._dest_prefix + str(savestatei))
             if not dest.is_file():
                 logger.warning(f"Destination file does not exist: {dest}")
 
@@ -69,8 +68,8 @@ class SaveStateSetSelectorConfig:
 
 
 class SaveStateSetSelector:
-    def __init__(self, config):
-        self.config = SaveStateSetSelectorConfig(config)
+    def __init__(self, config, src_root, dest_root):
+        self.config = SaveStateSetSelectorConfig(config, src_root, dest_root)
 
 
 
@@ -80,9 +79,9 @@ def main(argv):
     parser.add_argument("config", type=str)
     parsed = parser.parse_args(argv)
 
-    config_filename = parsed.config
+    config_filename = Path(parsed.config)
 
     with Path(config_filename).open() as f:
         config = yaml.safe_load(f)
 
-    savestate_set_selector = SaveStateSetSelector(config)
+    savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent, dest_root=definitions.FCEUX_DIR)
