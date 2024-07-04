@@ -63,6 +63,11 @@ def test_valid(valid_setup, caplog):
 
     # Assert
     assert len(caplog.messages) == 0
+    assert len(object_under_test.dest_set) == 10
+    assert len(object_under_test.src_sets) == 1
+    assert object_under_test.src_sets[0].name == 'test1'
+    assert len(object_under_test.src_sets[0].states) == 2
+
 
 def test_missing_dest_1(valid_setup, caplog):
     """Check that warnings are printed when dest files are missing"""

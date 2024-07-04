@@ -45,6 +45,14 @@ class SaveStateSetConfig:
         if not success:
             raise SaveStateSetSelectorConfigException("Source files missing. See log.")
 
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def states(self):
+        return self._states
+
 
 class SaveStateSetSelectorConfig:
     def __init__(self, raw, src_root, dest_root):
@@ -53,18 +61,24 @@ class SaveStateSetSelectorConfig:
             raise SaveStateSetSelectorConfigException(
                 f"Root directory does not exist: {self._root}")
 
-        self._dest_prefix = str(raw["destination-prefix"])
+        self._dest_set = [dest_root / (str(raw["destination-prefix"]) + str(savestatei))
+                          for savestatei in range(savestate_count)]
 
         # Check to be sure each save state exists. Only warn if it does not exist since
         # it may indicate a typo in the config.
-        for savestatei in range(savestate_count):
-            dest = dest_root / (self._dest_prefix + str(savestatei))
+        for dest in self._dest_set:
             if not dest.is_file():
                 logger.warning(f"Destination file does not exist: {dest}")
 
+        self._src_sets = [SaveStateSetConfig(x, self._root) for x in raw["savestate-configs"]]
 
-        self._sets = [SaveStateSetConfig(x, self._root) for x in raw["savestate-configs"]]
+    @property
+    def src_sets(self):
+        return tuple(self._src_sets)
 
+    @property
+    def dest_set(self):
+        return tuple(self._dest_set)
 
 
 class SaveStateSetSelector:
