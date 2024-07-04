@@ -1,0 +1,16 @@
+root: ../../megaman2/savestates
+
+destination-prefix: "Mega Man 2 (U)"
+
+savestate-configs:
+  - name: Train-Sub34
+    states:
+      - file: 01-flashman/Mega Man 2 (U).fc9
+        description: Flash Man Boss
+      - file: 12-wily4/Megan Man 2 (U).fc9
+        description: BBeam Boss
+      - file: 08-bubble/Mega Man 2 (U).fc0
+        description: Bubble Man start
+      - file: 04-crash/Mega Man 2 (U).fc0
+        description: Crash Man start
+
