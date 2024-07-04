@@ -5,6 +5,8 @@ import yaml
 from loguru import logger
 from speedrun import definitions
 from dataclasses import dataclass
+import datetime
+import shutil
 
 
 savestate_count = 10
@@ -85,7 +87,35 @@ class SaveStateSetSelector:
     def __init__(self, config, src_root, dest_root):
         self.config = SaveStateSetSelectorConfig(config, src_root, dest_root)
 
+    def activate(self, selection: int):
+        if (selection < 0) or (selection > len(self.config.src_sets)):
+            raise SaveStateSetSelectorConfigException(f"Index out of bounds {selection}")
 
+        src_set = self.config.src_sets[selection]
+
+        print(f"Activating {src_set.name} into the following slots")
+
+        for srci, src in enumerate(src_set.states):
+            print(f"  {srci} --> {src.description}")
+            dest = self.config.dest_set[srci]
+            shutil.copy(str(src.file), str(dest))
+
+    def backup(self):
+        save_folder = get_log_folder(definitions.BACKUP_DIR)
+        for backup_src in self.config.dest_set:
+            shutil.copy(str(backup_src), str(save_folder))
+
+        print(f"Existing save states backed up to {save_folder}")
+
+
+def get_log_folder(root):
+    # Setup target log folder
+    friendly_time = str(datetime.datetime.now()).replace(':', "-").replace(" ", "_")
+    log_folder = root / friendly_time
+
+    # Create the folders
+    log_folder.mkdir(parents=True, exist_ok=True)
+    return log_folder
 
 def main(argv):
 
@@ -100,4 +130,20 @@ def main(argv):
 
     savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent, dest_root=definitions.FCEUX_DIR)
 
-    pass
+    while True:
+        print("\nSave State Set Options:")
+        for sseti, sset in enumerate(savestate_set_selector.config.src_sets):
+            print(f"{sseti:>3}: {sset.name}")
+        print(f"{'Q':>3}: Quit")
+        print("Select an option to activate")
+        selection_raw = input()
+        if selection_raw.lower() == 'q':
+            break
+        try:
+            selection = int(selection_raw)
+            savestate_set_selector.backup()
+            savestate_set_selector.activate(selection)
+        except Exception as e:
+            logger.error(e)
+    print("Goodbye")
+
