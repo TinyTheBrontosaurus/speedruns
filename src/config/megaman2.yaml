@@ -22,3 +22,19 @@ savestate-configs:
       - file: 07-metal/Mega Man 2 (U).fc7
         description: Metal Floor 2
 
+  - name: Crash training (Normal)
+    states:
+      - file: 20240705-Crash/Mega Man 2 (U).fc0
+        description: Crash Mets
+      - file: 20240705-Crash//Mega Man 2 (U).fc8
+        description: Crash Platforms
+      - file: 20240705-Crash//Mega Man 2 (U).fc5
+        description: Block tower; item 1 fest
+      - file: 20240705-Crash//Mega Man 2 (U).fc3
+        description: Twin ladders pre birds
+      - file: 20240705-Crash//Mega Man 2 (U).fc4
+        description: Mid-birds just starting Item 3
+      - file: 20240705-Crash//Mega Man 2 (U).fc2
+        description: Crash boss
+      - file: 04-crash/Mega Man 2 (U).fc0
+        description: Crash Man start
