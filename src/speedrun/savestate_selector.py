@@ -63,7 +63,7 @@ class SaveStateSetSelectorConfig:
             raise SaveStateSetSelectorConfigException(
                 f"Root directory does not exist: {self._root}")
 
-        self._dest_set = [dest_root / (str(raw["destination-prefix"]) + str(savestatei))
+        self._dest_set = [dest_root / (str(raw["destination-prefix"]) + str((savestatei + 1) % savestate_count))
                           for savestatei in range(savestate_count)]
 
         # Check to be sure each save state exists. Only warn if it does not exist since
@@ -96,7 +96,7 @@ class SaveStateSetSelector:
         print(f"Activating {src_set.name} into the following slots")
 
         for srci, src in enumerate(src_set.states):
-            print(f"  {srci} --> {src.description}")
+            print(f"  {srci + 1} --> {src.description}")
             dest = self.config.dest_set[srci]
             shutil.copy(str(src.file), str(dest))
 
@@ -125,20 +125,29 @@ def main(argv):
 
     config_filename = Path(parsed.config)
 
-    with Path(config_filename).open() as f:
-        config = yaml.safe_load(f)
 
-    savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent, dest_root=definitions.FCEUX_DIR)
+    reload = True
 
     while True:
+        if reload:
+            print("Loading config...")
+            with Path(config_filename).open() as f:
+                config = yaml.safe_load(f)
+            savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent,
+                                                          dest_root=definitions.FCEUX_DIR)
+
         print("\nSave State Set Options:")
         for sseti, sset in enumerate(savestate_set_selector.config.src_sets):
             print(f"{sseti:>3}: {sset.name}")
+        print(f"{'R':>3}: Reload")
         print(f"{'Q':>3}: Quit")
         print("Select an option to activate")
         selection_raw = input()
         if selection_raw.lower() == 'q':
             break
+        if selection_raw.lower() == 'r':
+            reload = True
+            continue
         try:
             selection = int(selection_raw)
             savestate_set_selector.backup()

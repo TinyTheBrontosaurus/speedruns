@@ -5,12 +5,20 @@ destination-prefix: "Mega Man 2 (U).fc"
 savestate-configs:
   - name: Train-Sub34
     states:
-      - file: 01-flashman/Mega Man 2 (U).fc9
-        description: Flash Man Boss
       - file: 12-wily4/Mega Man 2 (U).fc9
         description: BBeam Boss
       - file: 08-bubble/Mega Man 2 (U).fc0
         description: Bubble Man start
       - file: 04-crash/Mega Man 2 (U).fc0
         description: Crash Man start
+      - file: 12-wily4/Mega Man 2 (U).fc0
+        description: Wily 4 Start
+      - file: 12-wily4/Mega Man 2 (U).fc8
+        description: Wily 4 Bottom floor
+      - file: 12-wily4/drop-item2.fc0
+        description: Wily 4 Drop Item 2
+      - file: 07-metal/Mega Man 2 (U).fc0
+        description: Metal Start
+      - file: 07-metal/Mega Man 2 (U).fc7
+        description: Metal Floor 2
 
