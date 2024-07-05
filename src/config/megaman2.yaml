@@ -38,3 +38,15 @@ savestate-configs:
         description: Crash boss
       - file: 04-crash/Mega Man 2 (U).fc0
         description: Crash Man start
+
+  - name: Wily 1 Training (Normal)
+    states:
+      - file: 09-wily1/Mega Man 2 (U).fc0
+        description: Wiliy 1 start
+      - file: 09-wily1/Mega Man 2 (U).fc9
+        description: Trogdor platforming start
+      - file: 20240705-wily/Mega Man 2 (U).fc4
+        description: Wily 2 start
+      - file: 20240705-wily/Mega Man 2 (U).fc5
+        description: Wily 2 pre flash
+
