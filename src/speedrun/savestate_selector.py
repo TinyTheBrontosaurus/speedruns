@@ -129,26 +129,26 @@ def main(argv):
     reload = True
 
     while True:
-        if reload:
-            print("Loading config...")
-            with Path(config_filename).open() as f:
-                config = yaml.safe_load(f)
-            savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent,
-                                                          dest_root=definitions.FCEUX_DIR)
-
-        print("\nSave State Set Options:")
-        for sseti, sset in enumerate(savestate_set_selector.config.src_sets):
-            print(f"{sseti:>3}: {sset.name}")
-        print(f"{'R':>3}: Reload")
-        print(f"{'Q':>3}: Quit")
-        print("Select an option to activate")
-        selection_raw = input()
-        if selection_raw.lower() == 'q':
-            break
-        if selection_raw.lower() == 'r':
-            reload = True
-            continue
         try:
+            if reload:
+                print("Loading config...")
+                with Path(config_filename).open() as f:
+                    config = yaml.safe_load(f)
+                savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent,
+                                                              dest_root=definitions.FCEUX_DIR)
+
+            print("\nSave State Set Options:")
+            for sseti, sset in enumerate(savestate_set_selector.config.src_sets):
+                print(f"{sseti:>3}: {sset.name}")
+            print(f"{'R':>3}: Reload")
+            print(f"{'Q':>3}: Quit")
+            print("Select an option to activate")
+            selection_raw = input()
+            if selection_raw.lower() == 'q':
+                break
+            if selection_raw.lower() == 'r':
+                reload = True
+                continue
             selection = int(selection_raw)
             savestate_set_selector.backup()
             savestate_set_selector.activate(selection)

@@ -49,4 +49,30 @@ savestate-configs:
         description: Wily 2 start
       - file: 20240705-wily/Mega Man 2 (U).fc5
         description: Wily 2 pre flash
+      - file: 20240705-wily/Mega Man 2 (U).fc6
+        description: Wily 3 start
+      - file: 20240705-wily/Mega Man 2 (U).fc7
+        description: Wily 3 Guts
+      - file: 20240705-wily/Mega Man 2 (U).fc8
+        description: Wily 3 Guts++
+      - file: 20240705-wily/Mega Man 2 (U).fc9
+        description: Wily 4 start
+      - file: 20240705-wily/Mega Man 2 (U).fc0
+        description: Wily 4 pre item 2
+      - file: 20240705-wily/asdf.fc0
+        description: Wily 5 start
 
+  - name: Wood training (Normal)
+    states:
+      - file: 06-wood/Mega Man 2 (U).fc0
+        description: Wood start
+      - file: 06-wood/Mega Man 2 (U).fc9
+        description: Wood boss
+      - file: 20240705/Mega Man 2 (U).fc3
+        description: Wood after flash
+      - file: 20240705/Mega Man 2 (U).fc4
+        description: Wood monkeys
+      - file: 20240705/Mega Man 2 (U).fc9
+        description: Rabbit 1
+      - file: 20240705/Mega Man 2 (U).fc0
+        description: Rabbit 3
