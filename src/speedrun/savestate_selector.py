@@ -136,6 +136,12 @@ def main(argv):
                     config = yaml.safe_load(f)
                 savestate_set_selector = SaveStateSetSelector(config, src_root=config_filename.parent,
                                                               dest_root=definitions.FCEUX_DIR)
+        except Exception as e:
+            logger.error(e)
+            print("Config failed. Press enter to retry")
+            input()
+            continue
+        try:
 
             print("\nSave State Set Options:")
             for sseti, sset in enumerate(savestate_set_selector.config.src_sets):
@@ -154,5 +160,6 @@ def main(argv):
             savestate_set_selector.activate(selection)
         except Exception as e:
             logger.error(e)
+            reload = False
     print("Goodbye")
 
