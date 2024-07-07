@@ -234,20 +234,20 @@
         </SplitTime>
       </SplitTimes>
       <BestSegmentTime>
-        <RealTime>00:02:14.4162070</RealTime>
+        <RealTime>00:02:42.8557500</RealTime>
       </BestSegmentTime>
       <SegmentHistory>
         <Time id="-2">
-          <RealTime>00:02:42.8557510</RealTime>
+          <RealTime>00:02:44.8557510</RealTime>
         </Time>
         <Time id="2">
-          <RealTime>00:02:14.4162070</RealTime>
+          <RealTime>00:02:44.4162070</RealTime>
         </Time>
         <Time id="4">
-          <RealTime>00:02:16.5502610</RealTime>
+          <RealTime>00:02:46.5502610</RealTime>
         </Time>
         <Time id="5">
-          <RealTime>00:02:19.5055120</RealTime>
+          <RealTime>00:02:49.5055120</RealTime>
         </Time>
         <Time id="9">
           <RealTime>00:02:48.9480860</RealTime>
