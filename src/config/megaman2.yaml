@@ -89,3 +89,9 @@ savestate-configs:
         description: Air Level 2
       - file: 20240706-Bosss/Mega Man 2 (U).fc9
         description: Air Boss
+      - file: 20240706-Bosss/Mega Man 2 (U).fc4
+        description: Heat yoki
+      - file: 20240706-Bosss/heatoneup.fcx
+        description: Heat One up
+      - file: 20240706-Bosss/Mega Man 2 (U).fc8
+        description: Heat boss
