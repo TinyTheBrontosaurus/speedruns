@@ -85,3 +85,7 @@ savestate-configs:
         description: Quick boss
       - file: 20240706-Bosss/Mega Man 2 (U).fc6
         description: Air Hops
+      - file: 20240706-Bosss/Mega Man 2 (U).fc7
+        description: Air Level 2
+      - file: 20240706-Bosss/Mega Man 2 (U).fc9
+        description: Air Boss
