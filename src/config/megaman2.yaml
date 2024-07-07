@@ -83,3 +83,5 @@ savestate-configs:
         description: Flash boss
       - file: 20240706-Bosss/Mega Man 2 (U).fc5
         description: Quick boss
+      - file: 20240706-Bosss/Mega Man 2 (U).fc6
+        description: Air Hops
