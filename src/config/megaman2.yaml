@@ -95,3 +95,16 @@ savestate-configs:
         description: Heat One up
       - file: 20240706-Bosss/Mega Man 2 (U).fc8
         description: Heat boss
+
+  - name: Air Man Clouds
+    states:
+      - file: 20240717-AirManClouds/Mega Man 2 (U).fc4
+        description: Air Man Pre cloud
+      - file: 20240717-AirManClouds/Mega Man 2 (U).fc6
+        description: Air Man Cloud 2
+      - file: 20240717-AirManClouds/Mega Man 2 (U).fc5
+        description: Air Man Cloud 3
+      - file: 20240706-Bosss/Mega Man 2 (U).fc6
+        description: Air Hops
+      - file: 20240706-Bosss/Mega Man 2 (U).fc7
+        description: Air Level 2
