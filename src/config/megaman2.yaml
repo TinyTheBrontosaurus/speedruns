@@ -108,3 +108,12 @@ savestate-configs:
         description: Air Hops
       - file: 20240706-Bosss/Mega Man 2 (U).fc7
         description: Air Level 2
+      - file: 20240717-AirManClouds/Mega Man 2 (U).fc2
+        description: Bubble Flying past Frogs
+      - file: 08-bubble/Mega Man 2 (U).fc0
+        description: Bubble Man start
+      - file: 20240717-AirManClouds/crashdouble.fc
+        description: BBeam Double Shot
+      - file: 20240717-AirManClouds/Mega Man 2 (U).fc0
+        description: Alien
+
