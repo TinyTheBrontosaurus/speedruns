@@ -5,7 +5,7 @@ destination-prefix: "Mega Man 2 (U).fc"
 savestate-configs:
   - name: Train-Sub34
     states:
-      - file: 12-wily4/Mega Man 2 (U).fc9
+      - file: 20240717-AirManClouds/wily4bbeam.fc
         description: BBeam Boss
       - file: 08-bubble/Mega Man 2 (U).fc0
         description: Bubble Man start
@@ -116,4 +116,6 @@ savestate-configs:
         description: BBeam Double Shot
       - file: 20240717-AirManClouds/Mega Man 2 (U).fc0
         description: Alien
+      - file: 20240717-AirManClouds/bubbleitem2.fc
+        description: Bubble item 2 jump
 
