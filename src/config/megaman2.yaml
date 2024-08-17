@@ -119,3 +119,59 @@ savestate-configs:
       - file: 20240717-AirManClouds/bubbleitem2.fc
         description: Bubble item 2 jump
 
+  - name: Difficult 1 (Flash Air Quick Metal)
+    states:
+      - file: 20240815-difficult/flash-tower.fc
+        description: Flash Tower
+      - file: 20240815-difficult/flash-man-half-energy.fc
+        description: Flash Man (1/2 energy)
+      - file: 20240815-difficult/flash-man-full-energy.fc
+        description: Flash Man (Full energy)
+      - file: 20240815-difficult/air-clouds.fc
+        description: Air Clouds
+      - file: 20240815-difficult/air-blows.fc
+        description: Air Blows
+      - file: 20240815-difficult/air-man.fc
+        description: Air Man
+      - file: 20240815-difficult/quick-robots.fc
+        description: Quick Robots
+      - file: 20240815-difficult/quick-man.fc
+        description: Quick Man
+      - file: 20240815-difficult/metal-towers.fc
+        description: Metal Towers
+      - file: 20240815-difficult/metal-man.fc
+        description: Metal Man
+
+
+  - name: Difficult 2 (Bubble Heat Wood Crash)
+    states:
+      - file: 20240815-difficult/bubble-fish.fc
+        description: Bubble Fish
+      - file: 20240815-difficult/bubble-man.fc
+        description: Bubble Man
+      - file: 20240815-difficult/heat-man.fc
+        description: Heat Man
+      - file: 20240815-difficult/wood-start.fc
+        description: Wood Start
+      - file: 20240815-difficult/wood-monkey.fc
+        description: Wood Monkeys
+      - file: 20240815-difficult/wood-man.fc
+        description: Wood Man
+      - file: 20240815-difficult/crash-man.fc
+        description: Crash Man
+
+  - name: Difficult 3 (Wily)
+    states:
+      - file: 20240815-difficult/trogdor.fc
+        description: Wily 1 Trogdor
+      - file: 20240815-difficult/boxes.fc
+        description: Wily 2 Boxes
+      - file: 20240815-difficult/guts.fc
+        description: Wily 3 Guts
+      - file: 20240815-difficult/graveyard.fc
+        description: Wily 5 Graveyard
+      - file: 20240815-difficult/wily.fc
+        description: Wily 5 Wily Machine 2
+      - file: 20240815-difficult/alien.fc
+        description: Wily 6 Alien
+
