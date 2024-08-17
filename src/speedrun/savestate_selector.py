@@ -145,7 +145,7 @@ def main(argv):
 
             print("\nSave State Set Options:")
             for sseti, sset in enumerate(savestate_set_selector.config.src_sets):
-                print(f"{sseti:>3}: {sset.name}")
+                print(f"{sseti +  1:>3}: {sset.name}")
             print(f"{'R':>3}: Reload")
             print(f"{'Q':>3}: Quit")
             print("Select an option to activate")
@@ -155,7 +155,7 @@ def main(argv):
             if selection_raw.lower() == 'r':
                 reload = True
                 continue
-            selection = int(selection_raw)
+            selection = int(selection_raw) - 1
             savestate_set_selector.backup()
             savestate_set_selector.activate(selection)
         except Exception as e:
