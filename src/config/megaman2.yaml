@@ -198,6 +198,8 @@ savestate-configs:
         description: Wily 4 Screen 4
       - file: 20240901-difficult/wily4-elevator1.fc
         description: Wily 4 Elevator 1
+      - file: 20240901-difficult/wily4-elevator1-spiketest.fc
+        description: Wily 4 Elevator 1 Spike Test
       - file: 20240901-difficult/wily4-elevator3.fc
         description: Wily 4 Elevator 3
       - file: 20240901-difficult/wily4-elevator4.fc
