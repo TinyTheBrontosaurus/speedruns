@@ -175,3 +175,13 @@ savestate-configs:
       - file: 20240815-difficult/alien.fc
         description: Wily 6 Alien
 
+  - name: Difficult Bubble
+    states:
+      - file: 20240815-difficult/bubble-fish.fc
+        description: Bubble Fish
+      - file: 20240901-difficult/bubble-fish-2.fc
+        description: Bubble Fish 2
+      - file: 20240901-difficult/bubble-frogs-2.fc
+        description: Bubble Frogs 2
+      - file: 20240815-difficult/bubble-man.fc
+        description: Bubble Man
